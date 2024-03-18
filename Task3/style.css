@@ -1,0 +1,88 @@
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f8ebeb;
+}
+
+.text-container {
+  display: inline-block;
+  font-size: 36px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.char-move {
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes charAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+}
+
+.odd-char {
+  animation-name: charAnimationOdd;
+}
+
+.even-char {
+  animation-name: charAnimationEven;
+}
+
+@keyframes charAnimationOdd {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+}
+
+@keyframes charAnimationEven {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+}
+
+#myButton {
+  margin-top: 10px;
+  padding: 12px 24px;
+  background-color: #074a48;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#myButton:hover {
+  background-color: #0056b3;
+}
